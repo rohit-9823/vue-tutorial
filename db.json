@@ -1,0 +1,48 @@
+{
+  "task": [
+    {
+      "id": 2,
+      "description": "Do Walk",
+      "day": "Thursday",
+      "reminder": false
+    },
+    {
+      "id": 3,
+      "description": "Do Walk",
+      "day": "Thursday",
+      "reminder": false
+    },
+    {
+      "id": 4,
+      "description": "Do Code",
+      "day": "Thursday",
+      "reminder": true
+    }
+  ],
+  "movie": [
+    {
+      "id": 1,
+      "description": "Kantara",
+      "day": "Tuesday",
+      "reminder": true
+    },
+    {
+      "id": 2,
+      "description": "PK",
+      "day": "Wednesday",
+      "reminder": true
+    },
+    {
+      "id": 3,
+      "description": "Dhoom",
+      "day": "Thursday",
+      "reminder": true
+    },
+    {
+      "id": 4,
+      "description": "Kal Ho Na Ho",
+      "day": "Friday",
+      "reminder": true
+    }
+  ]
+}

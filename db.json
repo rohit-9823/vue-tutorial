@@ -7,15 +7,15 @@
       "reminder": false
     },
     {
-      "id": 3,
-      "description": "Do Walk",
-      "day": "Thursday",
-      "reminder": false
-    },
-    {
       "id": 4,
       "description": "Do Code",
       "day": "Thursday",
+      "reminder": true
+    },
+    {
+      "id": 0.8372296809389652,
+      "description": "Do Dance",
+      "day": "thursday",
       "reminder": true
     }
   ],

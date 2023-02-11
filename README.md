@@ -1,6 +1,5 @@
 # vue-app
 
+Tutorial from udemy- Section 1
 
-Tutorial from Youtube- Part I 
-
-Includes: emits, api, data passing
+Basic data passing and showing Task real time project

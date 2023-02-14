@@ -1,6 +1,6 @@
 <template>
   <div class="ch7">
-    <h1>CH-7 UDEMY </h1>
+    <h1>Section 1 CH-7 UDEMY </h1>
     <AddTask @handledata="handletask"/>
     <ShowTask :taskvalue="this.taskdata"/>
   </div>

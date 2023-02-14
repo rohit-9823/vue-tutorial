@@ -14,9 +14,7 @@ data(){
     }
 },
 methods:{
-    handlesubmit(){
-        this
-    }
+  
 },
 emits:['handledata'],
 

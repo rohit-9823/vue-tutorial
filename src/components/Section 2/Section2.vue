@@ -8,6 +8,7 @@
 <div class="seconddiv">
     <p>{{functionvalue()}}</p>
   <p>V-Bind:  <a class="clickme" v-bind:href="linkData">Click Me</a></p>
+  
 </div>
 <!-- ------------------bind ended---------------------------------------------- -->
 <!-- ------------------Assignment Started---------------------------------------------- -->
@@ -50,12 +51,41 @@
 <input type="text" name="" id="" placeholder="Last Name" v-model="assignment2textlast"> <br/>
 <p>{{showall}}</p>
 <br/>
-<input type="text" v-bind:value="entervalue" v-on:input="handlename" v-on:keyup.enter="handleenter" placeholder="Press Enter after typing"> <br/>
+<input type="text" v-bind:value="entervalue" v-on:input="handlename" @keyup.enter="handleenter()" placeholder="Press Enter after typing"> <br/>
 <button @click="handlereset">Reset</button>
 <p>{{assignment2text2}}</p>
 
 </div>
   <!-- ------------------Assignment 2 Ended---------------------------------------------- -->
+  <!-- ------------------Assignment 3 Started---------------------------------------------- -->
+  <div class="assignment3">
+    <h1>Assignment 3</h1>
+    <button @click="handleadd5(5)">Add 5</button>
+    <button @click="handleadd5(1)">Add 1</button>
+    <p>Result: {{handleadd}}</p>
+  </div>
+  <!-- ------------------Assignment 3 Ended---------------------------------------------- -->
+  <!-- ------------------INline css  Started---------------------------------------------- -->
+  <div class="inlinecss">
+    <div 
+        :class="['box1',{active: boxtype}]"
+    @click="handlebox"></div>
+    <div class="box2"
+    :class="styling"
+    ></div>
+    <div class="box3"></div>
+  </div>
+  <!-- ------------------INline css  Ended---------------------------------------------- -->
+  <!-- ------------------Assignment 4  Started---------------------------------------------- -->
+  <div class="assignment4">
+    <h1>Assignment 4</h1>
+    <input type="text" placeholder="Type user1 or user2" v-model="styleinput">
+    <p
+    :class="styleinput" 
+    
+    >Style Me!</p>
+  </div>
+  <!-- ------------------Assignment 4  Ended---------------------------------------------- -->
 </div>
 </template>
 
@@ -71,20 +101,52 @@ props:{
 data(){
     return{
         counter:0,
+        counter2:0,
         copytext:'',
         assignment2text:'',
         assignment2textlast:'',
         assignment2text2:'',
         entervalue:'',
+        boxtype:false,
+        boxtype2:false,
+        styleinput:'',
     }
 },
 computed:{
+
 showall(){
     return this.assignment2text + ' ' + this.assignment2textlast
+},
+handleadd(){
+
+if(this.counter2<35){
+    return `More number needed Counter is: ${this.counter2}`
+}
+else if(this.counter2>35){
+    return "Less Number Needed"
+}
+else{
+    return this.counter2
+}
+
+    },
+},
+watch:{
+handleadd(){
+    const that=this;
+    setTimeout(() => {
+    that.counter2=0
+}, 5000);
 }
 },
 methods:{
+   handlebox(){
+    this.boxtype=!this.boxtype
+   },
+handleadd5(value){
+this.counter2+=value
 
+},
     handlereset(){
 this.assignment2text2=''
 this.entervalue=''
@@ -174,5 +236,57 @@ console.log(this.counter);
     width: 30%;
     height: auto;
     margin: 0 auto;
+}
+.assignment3{
+    border: 1px solid rgb(78, 244, 106);
+    width: 30%;
+    height: auto;
+    margin: 0 auto;
+}
+.assignment4{
+    border: 1px solid blue;
+    width: 30%;
+    height: 200px;
+    margin: 0 auto;
+}
+.inlinecss{
+    border: 1px solid rgb(78, 244, 106);
+    width: 30%;
+    height: 400px;
+    margin: 0 auto;
+}
+.box1{
+    width: 160px;
+    height: 160px;
+    
+    background-color: red;
+}
+.active{
+    width: 160px;
+    height: 160px;
+    
+    background-color: greenyellow;
+}
+.box2{
+    width: 160px;
+    height: 160px;
+    
+    background-color: yellow;
+}
+.user1{
+    width: 160px;
+    background-color: yellow;
+    margin: auto;
+}
+.user2{
+    width: 160px;
+    background-color: blue;
+    color: white;
+    margin: auto;
+}
+.stylingpara{
+    background-color: red;
+    width:160px;
+    
 }
 </style>

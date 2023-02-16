@@ -10,13 +10,13 @@
       "id": 0.8372296809389652,
       "description": "Do Dance",
       "day": "thursday",
-      "reminder": true
+      "reminder": false
     },
     {
       "id": 0.10305331975643406,
       "description": "Do Walk",
       "day": "Tuesday",
-      "reminder": false
+      "reminder": true
     }
   ],
   "movie": [

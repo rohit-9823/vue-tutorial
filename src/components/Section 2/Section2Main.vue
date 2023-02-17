@@ -1,5 +1,7 @@
 <template>
+    <div class="section2main">
   <Section2 :linkData="bind_link" :functionvalue="ouputs" :name="personalInfo"/>
+</div>
 </template>
 
 <script>
@@ -37,5 +39,7 @@ export default {
 </script>
 
 <style>
-
+.section2main{
+    border: 1px solid black;
+}
 </style>

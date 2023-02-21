@@ -7,6 +7,7 @@
 <section3Main/>
 <Section4/>
 <Section5/>
+<section6/>
 </div>  
 </template>
 
@@ -18,6 +19,7 @@ import Section2Main from "./components/Section 2/Section2Main.vue";
 import Section3Main from './components/Section 3/Section3Main.vue';
 import Section4 from "./components/Section 4/Section4.vue";
 import Section5 from './components/Section 5/Section5.vue';
+import Section6 from './components/Section 6/Section6.vue';
 export default {
 name:'App',
 components:{
@@ -27,7 +29,8 @@ components:{
     Section2Main,
     Section3Main,
     Section4,
-Section5
+Section5,
+Section6
 }
 }
 </script>
@@ -41,5 +44,6 @@ Section5
     color: #2c3e50;
     margin-top: 60px;
   }
+  @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
   
 </style>

@@ -29,7 +29,7 @@ import Section8 from './components/Section 8/Section8Main.vue';
 import Section9 from './components/Section 9/Section9.vue';
 import Storedresource from './components/Section10/StoredResource.vue';
 import Section11 from './components/Section 11/Section11.vue';
-import Section12 from './components/Section 12 Backend/Section12.vue';
+import Section12 from './components/Section_12_Backend/Section12.vue';
 export default {
 name:'App',
 components:{

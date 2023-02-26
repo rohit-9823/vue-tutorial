@@ -1,24 +1,5 @@
 {
-  "task": [
-    {
-      "id": 4,
-      "description": "Do Code",
-      "day": "Thursday",
-      "reminder": true
-    },
-    {
-      "id": 0.8372296809389652,
-      "description": "Do Dance",
-      "day": "thursday",
-      "reminder": false
-    },
-    {
-      "id": 0.10305331975643406,
-      "description": "Do Walk",
-      "day": "Tuesday",
-      "reminder": true
-    }
-  ],
+  "task": [],
   "movie": [
     {
       "id": 1,

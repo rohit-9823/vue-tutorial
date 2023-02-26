@@ -5,13 +5,14 @@
     <button @click="$emit('handleshow',true),hideshow=false,delbtn=true" v-show="hideshow" class="active_button">Add New</button>
     <button @click="$emit('handleshow',true),hideshow=true,delbtn=false" v-show="delbtn" class="close_button">Close</button>
   </div>
-    <div class="task" :key="task.id" v-for="task in taskk">
+    <div class="task" :key="task.id" v-for="task in taskk" v-show="taskk.length!=0">
       <div :class="task.reminder==true? 'tasknameactive' : 'tasknameinactive'" @click="$emit('handledouble',task.id)">
             <h3>{{ task.description }}</h3> 
             <i @click="handlecross(task.id)" class="fa-regular fa-circle-xmark crossmark"></i>
             <h5>{{ task.day }}</h5>
           </div>
           </div>
+          <h1 v-show="taskk.length==0">No Record</h1>
     
   </header>
 </template>

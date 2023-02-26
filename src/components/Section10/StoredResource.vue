@@ -1,8 +1,9 @@
 <template>
     <div class="storeresource">
+        <h1>Section 10</h1>
         <div class="buttondiv">
-            <button @click="handlecomp(true)">Store Resources</button>
-            <button @click="handlecomp(false)">Add Resources</button>
+            <basebutton @click="handlecomp(true)" :mode="storebtn">Store Resources</basebutton>
+            <basebutton @click="handlecomp(false)" :mode="addbtn">Add Resources</basebutton>
         </div>
         <Addresource v-show="!showcomp" @newfun="handledata"/>
         <div class="infosection" v-for="infodata in infodata" :key="infodata.id" v-show="showcomp">
@@ -16,11 +17,20 @@
 </template>
 
 <script>
+import Basebutton from '../UI/Basebutton.vue'
 import Addresource from './AddResource.vue'
 
 export default {
-  components: { Addresource },
+  components: { Addresource, Basebutton },
     name:'Storedresource',
+    computed:{
+        storebtn(){
+            return this.showcomp ? "activebtn" : "inactive"
+        },
+        addbtn(){
+            return this.showcomp ? "inactive" : "activebtn"
+        }
+    },
     data(){
         return{
             showcomp:true,
@@ -33,10 +43,11 @@ export default {
         handlecomp(value){
             this.showcomp=value
             
+            
         },
-        handledata(id,description,link){
-            let cls={id,description,link}
-            this.infodata.push(cls)
+        handledata(value){
+            console.log("parent",value);
+            this.infodata.push(value)
             console.log(this.infodata);
         },
         handeldel(value){
@@ -53,11 +64,11 @@ export default {
     border: 1px solid gainsboro;
     margin-top: 10px;
     padding: 10px;
+    width: 50%;
+    margin: auto;
 }
 .infosection{
-    text-align: left;
-    
-    
+    text-align: left;   
 }
 .btnsection{
     float:right;

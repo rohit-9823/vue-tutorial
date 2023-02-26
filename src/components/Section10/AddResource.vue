@@ -3,11 +3,11 @@
     <h1>Add Resources</h1>
     <form action="" class="addform" @submit.prevent="handleresource">
         <label for="">Title</label><br/>
-        <input type="text" name="" id="" v-model="title"><br/>
+        <input type="text" name="" id="" v-model="info.id"><br/>
         <label for="">Description</label><br/>
-        <input type="textarea" row=5 col=3 name="" id="" v-model="description"><br/>
+        <input type="textarea" row=5 col=3 name="" id="" v-model="info.description"><br/>
         <label for="">Link</label><br/>
-        <input type="text" name="" id="" v-model="link"><br/>
+        <input type="text" name="" id="" v-model="info.link"><br/>
         <button>Add Resource</button>
 
     </form>
@@ -20,8 +20,7 @@ name:'Addresource',
 data(){
     return{
         info:{
-            id:Math.floor(Math.random()),
-            title:'', 
+            id:'', 
             description:'', 
             link:'', 
         }
@@ -29,8 +28,15 @@ data(){
 },
 methods:{
     handleresource(){
-console.log(this.title + this.description + this.link);
-this.$emit("newfun",this.title ,this.description ,this.link)
+console.log(this.info );
+if(this.info.id.trim()==''|| this.info.description.trim()=='' || this.info.link.trim()==''){
+    
+    alert("empty");
+}
+else{
+    this.$emit("newfun",this.info)
+    
+}
     }
 },
 emits:['newfun'],
@@ -46,7 +52,7 @@ props:{
     padding: 10px;
 }
 .addform input{
-    width:100%;
+    width:70%;
     padding: 10px;
 }
 </style>

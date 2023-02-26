@@ -11,6 +11,7 @@
 <Section8/>
 <section9/>
 <Storedresource/>
+<Section11/>
 </div>  
 </template>
 
@@ -25,8 +26,8 @@ import Section5 from './components/Section 5/Section5.vue';
 import Section6 from './components/Section 6/Section6.vue';
 import Section8 from './components/Section 8/Section8Main.vue';
 import Section9 from './components/Section 9/Section9.vue';
-import Section10 from './components/Section10/Section10.vue';
 import Storedresource from './components/Section10/StoredResource.vue';
+import Section11 from './components/Section 11/Section11.vue';
 export default {
 name:'App',
 components:{
@@ -41,6 +42,7 @@ Section6,
 Section8,
 Section9,
 Storedresource,
+Section11,
 
 }
 }
